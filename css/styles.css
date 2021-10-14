@@ -18,16 +18,22 @@ body{
     text-decoration: none;
 }
 /* Шапка сайта */
-.header{
+.site-header{
     background-color: var(--secondary-accent-color);
     border-bottom: 1px solid #ECECEC;
 }
-.main-nav{
+.main-nav,
+.features-list,
+.about-list,
+.team-list,
+.projects-list,
+.portfolio-nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-right: auto;
     margin-left: auto;
-    width: 1200px;
+    width: 1230px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -87,10 +93,9 @@ body{
     background-color: #2F303A;
     text-align: center;
     padding-top: 200px;
-    margin-bottom: 94px;
 }
 .hero-title{
-   
+    width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36; 
@@ -119,9 +124,13 @@ body{
    
 }
 
+.about-list .list-item + .list-item{
+    margin-left: 30px;
+}
 /* Секция преимущества*/
 .section{
-    margin-bottom: 94px;
+    padding-bottom: 94px;
+  
 }
 .section-title{
     font-weight: 700;
@@ -143,43 +152,64 @@ body{
     clip-path: inset(50%);
     margin: -1px;
   }
-.features-list-title{
+  .features-list{
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+.features-list .list-item + .list-item{
+   margin-left: 30px; 
+}
+.features-list .list-title{
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--title-text-color);
-    margin: 0 0 10px 0;
-    
+    margin: 0 0 10px 0;  
 }
-.features-list-text{
-    margin: 0 30px 0 0;
+.features-list .list-text{
+    margin: 0;
 }
 
 /* Секция наша команда*/
-.section-team{
+.team{
     background-color:#F5F4FA;
+    padding-top: 94px;
+    margin-bottom: 0;
+    
 }
 .team-list{
+    margin-bottom: 0;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-
 }
-.team-list-item{
+.team-list .list-item{
     padding-bottom: 30px;
 }
-.team-list-title{
+.team-list .list-item + .list-item{
+    margin-left: 30px; 
+ }
+.team-list .list-title{
     font-weight: 500;
     color: var(--title-text-color);  
     margin: 30px 0 10px 0; 
 }  
-.team-list-text{
+.team-list .list-text{
     margin: 0;
 }
 /* Подвал сайта */
+
 .site-footer{
     background-color: #2F303A; 
-    padding: 60px 0 60px 215px;
+    padding: 60px 0;
+}
+.footer{
+    margin-right: auto;
+    margin-left: auto;
+    width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .contact-link{
     text-decoration: none;
@@ -201,6 +231,13 @@ body{
 }
 
 /* Страница Портфолио */
+.portfolio-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 94px;
+    text-align: center;
+}
 .nav-button{
     cursor: pointer;
     font-family: inherit;
@@ -213,7 +250,9 @@ body{
     line-height: 1.63;
     text-align: center;
     padding: 6px 22px;
-
+}
+.portfolio-nav .list-item + .list-item{
+    margin-left: 8px;
 }
 .nav-button:hover,
 .nav-button:focus{
@@ -221,14 +260,31 @@ body{
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--secondary-accent-color);
 }
-.projects-item-title{
+.projects-list .list-item{
+    width: 370px;
+
+    border: 1px solid #EEEEEE;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.projects-list .list-item:nth-child(3n){
+    margin-right: 0;
+}
+.projects-list .list-item:nth-last-child(-n+3){
+    margin-bottom: 0;
+}
+
+.projects-list .list-title{
+    margin: 20px 24px 0 24px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--title-text-color);
 }
-.projects-item-text{
+.projects-list .list-text{
+    margin: 4px 24px 0 24px;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
