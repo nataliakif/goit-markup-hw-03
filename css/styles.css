@@ -276,7 +276,7 @@ body{
         border-top: none;
    
 }
-img {
+.list-image{
     display: block;
     width: 100%;
     height: auto;
