@@ -22,12 +22,7 @@ body{
     background-color: var(--secondary-accent-color);
     border-bottom: 1px solid #ECECEC;
 }
-.main-nav,
-.features-list,
-.about-list,
-.team-list,
-.projects-list,
-.projects-list{
+.container{
     display: flex;
     align-items: center;
     margin-right: auto;
@@ -89,7 +84,7 @@ body{
 }
 
 /* Секция Hero */
-.hero .container{   
+.hero-container {   
     background-color: #2F303A;
     text-align: center;
     padding-top: 200px;
