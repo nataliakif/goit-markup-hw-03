@@ -268,10 +268,10 @@ body{
 }
 .projects-list .list-item{
     width: 370px;
-
-    border: 1px solid #EEEEEE;
     margin-right: 30px;
     margin-bottom: 30px;
+    border: 1px solid #EEEEEE;
+   
 }
 .projects-list .list-item:nth-child(3n){
     margin-right: 0;
@@ -296,4 +296,6 @@ body{
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
  }
- 
+ .list-image::after{
+    border: 1px solid #EEEEEE;
+ }
