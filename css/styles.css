@@ -27,9 +27,8 @@ body{
 .about-list,
 .team-list,
 .projects-list,
-.portfolio-nav {
+.projects-list{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     margin-right: auto;
     margin-left: auto;
@@ -54,6 +53,7 @@ body{
 .header-contacts{
     margin: 0;
     display: flex;
+    padding-inline-start: 0;
 
     text-decoration: none;
     font-weight: 500;
@@ -89,34 +89,40 @@ body{
 }
 
 /* Секция Hero */
-.hero{   
+.hero .container{   
     background-color: #2F303A;
     text-align: center;
     padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hero-title{
     width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+
+    color: var(--secondary-accent-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36; 
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--secondary-accent-color);
-    margin-top: 0px;
-    margin-bottom: 30px;
+    
+    
     }
 .hero-button{
     cursor: pointer;
     font-family: inherit;
     background-color: var(--primary-accent-color);
-    border-radius: 4px; 
+    border-radius: 4px;
+    border-width: 0; 
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
     color: var(--secondary-accent-color);
     padding: 10px 32px;
-    margin-bottom: 200px;
    
     }
 .hero-button:hover, .hero-button:focus{
@@ -152,11 +158,7 @@ body{
     clip-path: inset(50%);
     margin: -1px;
   }
-  .features-list{
-      margin: 0;
-      padding: 0;
-      display: flex;
-  }
+  
 .features-list .list-item + .list-item{
    margin-left: 30px; 
 }
@@ -186,6 +188,9 @@ body{
 }
 .team-list .list-item{
     padding-bottom: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 .team-list .list-item + .list-item{
     margin-left: 30px; 
@@ -208,8 +213,6 @@ body{
     margin-right: auto;
     margin-left: auto;
     width: 1230px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 .contact-link{
     text-decoration: none;
@@ -232,7 +235,7 @@ body{
 
 /* Страница Портфолио */
 .portfolio-nav {
-    display: flex;
+    display: flex;  
     justify-content: center;
     margin-bottom: 50px;
     margin-top: 94px;
@@ -259,6 +262,9 @@ body{
     background: var(--primary-accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--secondary-accent-color);
+}
+.projects-list{
+    flex-wrap: wrap;
 }
 .projects-list .list-item{
     width: 370px;
