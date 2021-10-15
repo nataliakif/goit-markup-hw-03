@@ -11,25 +11,41 @@ body{
     line-height: 1.7;
     letter-spacing: 0.03em;
 }
-.list{
+h1,h2,h3,p{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
-.link{
+a{
     text-decoration: none;
 }
 /* Шапка сайта */
-.site-header{
+.header{
     background-color: var(--secondary-accent-color);
     border-bottom: 1px solid #ECECEC;
 }
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .container{
-    display: flex;
-    align-items: center;
     margin-right: auto;
     margin-left: auto;
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
+}
+.main-nav,
+.about-list,
+.features-list,
+.team-list,
+.projects-list,
+.portfolio-nav{
+    display: flex;
+    align-items: center;
 }
 .logo{
     margin-right: 93px;
@@ -46,11 +62,8 @@ body{
 
 .nav-list,
 .header-contacts{
-    margin: 0;
     display: flex;
-    padding-inline-start: 0;
 
-    text-decoration: none;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -67,7 +80,6 @@ body{
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-top: 0;
 }
 .nav-link{
     color: var(--title-text-color);
@@ -84,7 +96,7 @@ body{
 }
 
 /* Секция Hero */
-.hero-container {   
+.hero{   
     background-color: #2F303A;
     text-align: center;
     padding-top: 200px;
@@ -94,7 +106,6 @@ body{
     width: 696px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0px;
     margin-bottom: 30px;
 
     color: var(--secondary-accent-color);
@@ -129,17 +140,13 @@ body{
     margin-left: 30px;
 }
 /* Секция преимущества*/
-.section{
-    padding-bottom: 94px;
-  
-}
 .section-title{
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     color: var(--title-text-color);
-    margin: 0 0 50px 0;
+    margin-bottom: 50px;
 }
 .visually-hidden {
     position: absolute;
@@ -162,27 +169,25 @@ body{
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--title-text-color);
-    margin: 0 0 10px 0;  
+    margin-bottom: 10px;  
 }
 .features-list .list-text{
     margin: 0;
 }
-
+.about{
+    padding-top: 0;
+}
 /* Секция наша команда*/
 .team{
     background-color:#F5F4FA;
-    padding-top: 94px;
-    margin-bottom: 0;
     
 }
 .team-list{
-    margin-bottom: 0;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
 }
 .team-list .list-item{
-    padding-bottom: 30px;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -193,51 +198,46 @@ body{
 .team-list .list-title{
     font-weight: 500;
     color: var(--title-text-color);  
-    margin: 30px 0 10px 0; 
+    margin-bottom: 10px; 
 }  
-.team-list .list-text{
-    margin: 0;
+.team-decoration{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 /* Подвал сайта */
 
-.site-footer{
+.footer{
     background-color: #2F303A; 
     padding: 60px 0;
 }
-.footer{
-    margin-right: auto;
-    margin-left: auto;
-    width: 1230px;
+.contact{
+    margin-top: 20px;
 }
 .contact-link{
-    text-decoration: none;
     font-style: normal;
     color: rgba(255, 255, 255, 0.6);
-    margin: 9px 0 0 0;
-}
-.footer-logo-span,
-.address {
-      color: var(--secondary-accent-color);
-} 
-.contact{
-    padding: 0;
-    margin: 20px 0 0 0;
 }
 .contact-link:hover,
 .contact-link:focus{
     color: var(--primary-accent-color);
 }
+.contact .list-item + .list-item{
+    margin-top: 9px;
+}
+
+.footer-logo-span,
+.contact .address {
+      color: var(--secondary-accent-color);
+} 
 
 /* Страница Портфолио */
 .portfolio-nav {
-    display: flex;  
     justify-content: center;
     margin-bottom: 50px;
-    margin-top: 94px;
-    text-align: center;
 }
 .nav-button{
     cursor: pointer;
+    border: transparent;
     font-family: inherit;
     color: var(--title-text-color);
     background-color: #F5F4FA;
@@ -267,8 +267,12 @@ body{
     margin-bottom: 30px;
 }
 .projects-list .border-rule{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
     border: 1px solid #EEEEEE; 
-        border-top: none;
+    border-top: none;
    
 }
 .list-image{
@@ -283,9 +287,6 @@ body{
     margin-bottom: 0;
 }
 .projects-list .list-title{
-    margin: 0 24px;
-    padding-top: 20px;
-
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -293,7 +294,8 @@ body{
     color: var(--title-text-color);
 }
 .projects-list .list-text{
-    margin: 4px 24px 0 24px;
+    margin-top: 4px;
+    
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
