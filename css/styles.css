@@ -55,6 +55,7 @@ a{
     line-height: 1.2;
     color: var(--primary-accent-color);   
 }
+
 .header-logo-span{
    color: var(--title-text-color);
 }
@@ -210,8 +211,10 @@ a{
     background-color: #2F303A; 
     padding: 60px 0;
 }
-.contact{
-    margin-top: 20px;
+.logo-footer{
+    display: block;
+    margin-right: 0;
+    margin-bottom: 20px;
 }
 .contact-link{
     font-style: normal;
@@ -242,7 +245,6 @@ a{
     color: var(--title-text-color);
     background-color: #F5F4FA;
     border-radius: 4px;
-    border-color: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
@@ -295,7 +297,7 @@ a{
 }
 .projects-list .list-text{
     margin-top: 4px;
-    
+
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
